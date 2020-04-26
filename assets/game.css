@@ -1,0 +1,212 @@
+.cndkGameArea {
+    background:#f2f2f2;
+    margin:0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial;
+}
+
+.cndkTopArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.cndkTopArea > div {
+    float: left;
+    width: 50%;
+}
+
+.cndkTopArea > div:last-child {
+    text-align: right;
+}
+
+.cndkTopArea > div > span {
+    background: #c5c5c5;
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cndkMainMenu {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.cndkMainMenu h1 {
+    font-size: 60px;
+}
+
+.cndkMainMenu h1 small{
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color:#333;
+}
+
+.cndkMainMenu button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background: #289476;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cndkQuestion {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    text-align: center;
+}
+
+.cndkLevel {
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    width: 100%;
+    text-align: center;
+}
+
+.cndkLevel .cndkBox { 
+    height: 50px;
+    width: 50px;
+    padding:0;
+    margin:0 15px;
+    transform: rotate(45deg);
+    display:inline-block;
+    background: #fff;
+    box-shadow: 0 0 45px #ccc;
+    transition: 0.5s;
+ }
+
+ .cndkLevel .cndkBoxCorrect{
+    background:green !important;
+ }
+
+ .cndkLevel .cndkBoxIncorrect{
+    background:red !important;
+ }
+
+ .cndkLevel .cndkBoxOpened{
+    background:orange;
+ }
+
+ .cndkLevel .cndkBoxCorrect input,  .cndkLevel .cndkBoxIncorrect input{
+     color:#fff !important;
+ } 
+
+ .cndkLevel .cndkBox input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    color:#000;
+    transform: rotate(-45deg);
+    outline: none;
+    transition: 1s;
+ }
+
+
+ .cndkTime > * {
+     float: right;
+ }
+
+ .cndkTime > button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    outline: none;
+ }
+
+ .cndkExtraTimer {
+     background: red !important;
+     color:#fff !important;
+ }
+
+ .cndkRequestLetter {
+     background-color: orange;
+ }
+
+ .cndkGuess {
+    background-color: #289476;
+ }
+
+ .cndkCurrentInfo {
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     text-align: center;
+     padding: 10px;
+ }
+
+ .cndkCurrentInfo > span {
+     display: block;
+ }
+
+ .cndkCurrentInfo .cndkCurrentQuestion {
+     display: inline;
+     padding: 0 10px;
+     border-radius: 10px;
+     background: #ccc;
+ }
+
+ .cndkCurrentInfo .cndkCurrentPoint {
+     font-weight: bold;
+     font-size: 20px;
+}
+
+ .cndkGameOver {
+     background: green;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     text-align: center;
+     color:#fff;
+ }
+
+ .cndkGameOver h2 {
+     border-radius: 40px;
+     font-size: 50px;
+     display: inline-block;
+     background: white;
+     color:green;
+     margin:50px 0 0 0;
+     padding: 20px;
+ }
+
+ .cndkGameOver h3 {
+     font-size: 50px;
+ }
+
+ .cndkGameOver button {
+     display: inline-block;
+     background: black;
+     color: white;
+     font-size: 20px;
+     padding: 10px;
+     border-radius: 10px;
+     border: none;
+     cursor: pointer;
+     outline: none;
+ }

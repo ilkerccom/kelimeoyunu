@@ -1,0 +1,191 @@
+{
+    "level1": 
+    [
+        {
+            "question" : "Orta boyutta anlamında yabancı sözcük.",
+            "answer" : "MİDİ"
+        },
+        {
+            "question" : "Eskiden İlbey da denen kamu yönetim görevlisi",
+            "answer" : "VALİ"
+        },
+        {
+            "question" : "Musibet sebebi sayılan asal sayı",
+            "answer" : "ONÜÇ"
+        },
+        {
+            "question" : "Eskimo fakirhanesi",
+            "answer" : "İGLO"
+        },
+        {
+            "question" : "Bir tahılın argoda rüşvet anlamında kullanılan adı",
+            "answer" : "ARPA"
+        },
+        {
+            "question" : "Taşınabilir süs eşyası",
+            "answer" : "TAKI"
+        }
+    ],
+    "level2": 
+    [
+        {
+            "question" : "Yapılacak bir hizmet veya satın alınacak bir mal için anlaşmaya göre önceden ödenen miktar",
+            "answer" : "AVANS"
+        },
+        {
+            "question" : "Bir veya iki çalgı için yazılmış, üç veya dört bölümden oluşan müzik eseri",
+            "answer" : "SONAT"
+        },
+        {
+            "question" : "Türlü boyutlarda, taşınabilir çeşitleri de olan, çubuklardan yapılmış esaret barınağı",
+            "answer" : "KAFES"
+        },
+        {
+            "question" : "Argoda yalan, uydurma söz anlamında kullanılan bir söz",
+            "answer" : "MAVAL"
+        },
+        {
+            "question" : "Çek git, kaybol, gözüm görmesin anlamındaki bir emir sözü",
+            "answer" : "YIKIL"
+        },
+        {
+            "question" : "Haşlanmış hamur bohçası",
+            "answer" : "MANTI"
+        }
+    ],
+    "level3": 
+    [
+        {
+            "question" : "Cinayete kurban giden kişi",
+            "answer" : "MAKTUL"
+        },
+        {
+            "question" : "Yavaş bir biçimde anlamında sözcük",
+            "answer" : "USULCA"
+        },
+        {
+            "question" : "Minyatür maşa",
+            "answer" : "CIMBIZ"
+        },
+        {
+            "question" : "Yere düşen boksörün onbirinci saniyede yaşadığı hezimet",
+            "answer" : "NAKAVT"
+        },
+        {
+            "question" : "Keskin öfke",
+            "answer" : "HİDDET"
+        },
+        {
+            "question" : "Selülozik cam silme gereci",
+            "answer" : "GAZETE"
+        }
+    ],
+    "level4": 
+    [
+        {
+            "question" : "Kanda şeker oranını düzenleyen protein yapılı bir hormon",
+            "answer" : "İNSÜLİN"
+        },
+        {
+            "question" : "Ton balığının diğer adı",
+            "answer" : "ORKİNOS"
+        },
+        {
+            "question" : "Saplantılı çalışkan",
+            "answer" : "İŞKOLİK"
+        },
+        {
+            "question" : "Soluğunu içinde tutarak kendini zorlama",
+            "answer" : "IKINMAK"
+        },
+        {
+            "question" : "'Habire, durmadan, boyuna' anlamlarında bir söz",
+            "answer" : "HABABAM"
+        },
+        {
+            "question" : "Zirai arazi aracı",
+            "answer" : "TRAKTÖR"
+        }
+    ],
+    "level5": 
+    [
+        {
+            "question" : "'Birinin iyi niyetini kötüye kullanma, sömürme' anlamındaki arapça kökenli bir sözcük",
+            "answer" : "İSTİSMAR"
+        },
+        {
+            "question" : "Fransızca kökenli 'Oportünist' kelimesinin Türkçe kökenli karşılığı",
+            "answer" : "FIRSATÇI"
+        },
+        {
+            "question" : "Aile ocağında pişirilmiş aş",
+            "answer" : "EVYEMEĞİ"
+        },
+        {
+            "question" : "Turistik kulübe",
+            "answer" : "BUNGALOV"
+        },
+        {
+            "question" : "Gözünün önündekini göremeyen anlamında kullanılan bir tabir",
+            "answer" : "BAKARKÖR"
+        },
+        {
+            "question" : "Romantik komedi filmlerinden sokak jargonuna giren 'Evlenilecek Erkek' anlamındaki tabir",
+            "answer" : "BAYDOĞRU"
+        }
+    ],
+    "level6": 
+    [
+        {
+            "question" : "Ayrılmayacak bir biçimde birleşmek",
+            "answer" : "KAYNAŞMAK"
+        },
+        {
+            "question" : "Destek veya beğeni gösterisi",
+            "answer" : "TEZAHÜRAT"
+        },
+        {
+            "question" : "Halk ağzında doğaüstü varlıkların genel adı, iyi saatte olsunlar",
+            "answer" : "ECİNNİLER"
+        },
+        {
+            "question" : "Başarısız öğrenciler için rövanş sınavı",
+            "answer" : "BÜTÜNLEME"
+        },
+        {
+            "question" : "Sessizlik kuralıyla yararlanılan kamusal bilgi deposu",
+            "answer" : "KÜTÜPHANE"
+        },
+        {
+            "question" : "Klas ve stil sahibi pansiyon",
+            "answer" : "BUTİKOTEL"
+        }
+    ],
+    "level7": 
+    [
+        {
+            "question" : "Bir işi layığıyla yapmak için öğrenilmesi gereken hassas bilgi, o işin en ince, en önemli bölümü",
+            "answer" : "PÜFNOKTASI"
+        },
+        {
+            "question" : "Üzüntüye kapılmak, kaygılanmak",
+            "answer" : "DERTLENMEK"
+        },
+        {
+            "question" : "Teknolojik hayat mahsülü",
+            "answer" : "BİLİMKURGU"
+        },
+        {
+            "question" : "Farmakolojik broşür",
+            "answer" : "PROSPEKTÜS"
+        },
+        {
+            "question" : "Beddua yiyeceği",
+            "answer" : "ZİFTİNPEKİ"
+        },
+        {
+            "question" : "Toplu takım oyunlarında pas alınabilecek, rakip oyuncuların bulunmadığı yere ilerlemek",
+            "answer" : "BOŞAKAÇMAK"
+        }
+    ]
+}
