@@ -1,5 +1,5 @@
 /*!
- * Cndk.KelimeOyunu.js v 0.0.1 (https://github.com/ilkerccom/cndkkelimeoyunu)
+ * Cndk.KelimeOyunu.js v 0.0.1 (https://github.com/ilkerccom/kelimeoyunu)
  * Ilker Cindik
  * Licensed under the MIT license
 */
