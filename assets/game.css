@@ -1,3 +1,9 @@
+/*!
+ * Cndk.KelimeOyunu.js v 0.0.1 (https://github.com/ilkerccom/kelimeoyunu)
+ * Ilker Cindik
+ * Licensed under the MIT license
+*/
+
 .cndkGameArea {
     background:#f2f2f2;
     margin:0;
@@ -91,11 +97,6 @@
     box-shadow: 0 0 45px #ccc;
     transition: 0.5s;
  }
-/*!
- * Cndk.KelimeOyunu.js v 0.0.1 (https://github.com/ilkerccom/kelimeoyunu)
- * Ilker Cindik
- * Licensed under the MIT license
-*/
 
  .cndkLevel .cndkBoxCorrect{
     background:green !important;
