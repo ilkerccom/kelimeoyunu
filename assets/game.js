@@ -41,6 +41,14 @@ $.fn.cndkkelimeoyunu = function(options) {
     // This
     var root = this;
 
+    // For mobile only
+    if(isMobile()){
+
+        // Replace keyboard shortcuts texts
+        textRequestLetter = textRequestLetter.replace("(SPACE)","");
+        textGuess = textGuess.replace("(ENTER)","");
+    }
+
     // Setup scene
     setupScene();
     function setupScene()
@@ -58,7 +66,7 @@ $.fn.cndkkelimeoyunu = function(options) {
         root.addClass("cndkGameArea");
 
         // Points and time area
-        root.append("<div class='cndkTopArea'><div class='cndkPoints'><span>" + textPoints + "0</span></div><div class='cndkTime'><button disabled class='cndkRequestLetter'>"+textRequestLetter+"</button><button disabled class='cndkGuess'>"+textGuess+"</button><span class='cndkTimer'>00:00</span></div></div>");
+        root.append("<div class='cndkTopArea'><div class='cndkPoints'><span><em>" + textPoints + "</em>0</span></div><div class='cndkTime'><button disabled class='cndkRequestLetter'>"+textRequestLetter+"</button><button disabled class='cndkGuess'>"+textGuess+"</button><span class='cndkTimer'>00:00</span></div></div>");
     }
 
     // Setup main menu
@@ -67,7 +75,7 @@ $.fn.cndkkelimeoyunu = function(options) {
     {
         if(!gameIsStarted && root.has(".cndkMainMenu"))
         {
-            root.append("<div class='cndkMainMenu'><h1 class='cndkGameName'>"+textGame+"<small>by Ilker Cindik</small></h1><button id='cndkStart'>"+textPlay+"</button></div>");
+            root.append("<div class='cndkMainMenu'><div><h1 class='cndkGameName'>"+textGame+"<small>by Ilker Cindik</small></h1><button id='cndkStart'>"+textPlay+"</button></div></div>");
 
             // Start game
             $(document).on("click", "#cndkStart", function() {
@@ -103,7 +111,6 @@ $.fn.cndkkelimeoyunu = function(options) {
                 // Check if used before and add to used keywords
                 while (gameUsedKeywords.includes(setCurrentLevel.answer.toUpperCase())) {
                     setCurrentLevel = loadedLevel[Math.floor((Math.random() * maxLevelsInLevel))];
-                    console.log(setCurrentLevel);
                 }
                 gameUsedKeywords.push(setCurrentLevel.answer.toUpperCase());
                 
@@ -252,7 +259,7 @@ $.fn.cndkkelimeoyunu = function(options) {
                 });
 
                 // Write points
-                $('.cndkPoints > span').text(textPoints + gamePoints);
+                $('.cndkPoints > span').html("<em>" + textPoints + "</em>" + gamePoints);
 
                 // Go to next level
                 setTimeout(function(){
@@ -496,26 +503,9 @@ $.fn.cndkkelimeoyunu = function(options) {
          return { start: start }      
     }();
 
-    var isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
-        },
-        any: function() {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-    };
-
+    // Check if mobile
+    function isMobile() {
+        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
 }
 

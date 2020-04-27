@@ -4,7 +4,7 @@
  * Licensed under the MIT license
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700,900&display=swap');
 
 .cndkGameArea button, .cndkGameArea input {
     -webkit-appearance: button;
@@ -48,36 +48,51 @@
 .cndkMainMenu {
     position: absolute;
     width: 100%;
-    height: 50%;
+    height: 100%;
     left: 0;
     bottom: 0;
     text-align: center;
+    background: #d8d8d8;
+    display: table;
+}
+
+.cndkMainMenu > div {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .cndkMainMenu h1 {
-    font-size: 60px;
+    font-size: 70px;
     font-weight: bolder;
+    line-height: 1;
 }
 
 .cndkMainMenu h1 small{
     display: block;
     font-size: 15px;
     font-weight: normal;
-    letter-spacing: 1px;
+    text-transform: uppercase;
     color:#333;
 }
 
 .cndkMainMenu button {
     display: block;
     margin: 0 auto;
-    padding: 10px;
-    font-size: 30px;
+    padding: 10px 30px;
+    font-size: 26px;
     font-weight: bold;
-    background: #289476;
+    background: linear-gradient(180deg, rgba(45,208,163,1) 0%, rgba(40,148,118,1) 100%);
     color: white;
-    border: none;
     border-radius: 10px;
     cursor: pointer;
+    text-shadow: 0 0 4px #145442;
+    box-shadow: 0 0 50px #2baf89;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+
+.cndkMainMenu button:hover {
+    background: linear-gradient(180deg, rgba(45,208,163,1) 100%, rgba(40,148,118,1) 50%);
 }
 
 .cndkQuestion {
@@ -116,16 +131,16 @@
     border:2px solid #ccc;
  }
 
+ .cndkLevel .cndkBoxOpened{
+    background:orange !important;
+ }
+
  .cndkLevel .cndkBoxCorrect{
     background:green !important;
  }
 
  .cndkLevel .cndkBoxIncorrect{
     background:red !important;
- }
-
- .cndkLevel .cndkBoxOpened{
-    background:orange !important;
  }
 
  .cndkLevel .cndkBoxCorrect input,  .cndkLevel .cndkBoxIncorrect input{
@@ -243,12 +258,18 @@
  }
 
  @media only screen and (max-width: 600px) {
+
     .cndkTopArea {
         position: relative;
     }
 
     .cndkCurrentInfo {
         padding: 0;
+    }
+
+    .cndkPoints em { 
+        font-style: normal;
+        font-weight: normal;
     }
 
     .cndkCurrentInfo .cndkCurrentQuestion, .cndkCurrentInfo .cndkCurrentPoint {
@@ -268,6 +289,28 @@
     .cndkTime > button {
         width:50%;
         float: left;
+        padding: 10px 5px;
+    }
+
+    .cndkTimer {
+        padding: 10px 0 !important;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(224,224,224,1) 100%) !important;
+        color:#867979;
+    }
+
+    .cndkPoints > span {
+        padding: 7px 0 !important;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(224,224,224,1) 100%) !important;
+    }
+
+    .cndkRequestLetter {
+        background: linear-gradient(180deg, rgba(255,170,15,1) 0%, rgba(226,104,13,1) 100%);
+        text-shadow: 0 1px 1px #fff
+    }
+
+    .cndkGuess {
+        background: linear-gradient(180deg, rgba(45,208,163,1) 0%, rgba(40,148,118,1) 100%);
+        text-shadow: 0 1px 1px #fff
     }
 
     .cndkQuestion {
@@ -281,6 +324,7 @@
     .cndkLevel .cndkBox {
         transform: rotate(0deg);
         margin:10px;
+        border-radius: 5px;
     }
 
     .cndkLevel .cndkBox input {
