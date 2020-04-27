@@ -103,6 +103,7 @@ $.fn.cndkkelimeoyunu = function(options) {
                 // Check if used before and add to used keywords
                 while (gameUsedKeywords.includes(setCurrentLevel.answer.toUpperCase())) {
                     setCurrentLevel = loadedLevel[Math.floor((Math.random() * maxLevelsInLevel))];
+                    console.log(setCurrentLevel);
                 }
                 gameUsedKeywords.push(setCurrentLevel.answer.toUpperCase());
                 
@@ -122,7 +123,7 @@ $.fn.cndkkelimeoyunu = function(options) {
         root.append("<div class='cndkLevel cndkLevel"+level+"'></div>");
         for(i=0;i<gameCurrentKeyword.length;i++)
         {
-            $(".cndkLevel"+level).append("<div class='cndkBox'><input class='cndkBox"+i+"' data-number="+i+" data-opened='false' maxlength='1' type='text'> </div>");
+            $(".cndkLevel"+level).append("<div class='cndkBox'><input class='cndkBox"+i+"' data-number="+i+" data-opened='false' maxlength='1' type='text' disabled='true'> </div>");
         }
         $(".cndkLevel").append("<div class='cndkQuestion'>" + gameCurrentQuestion + "</div>");
 
@@ -142,7 +143,7 @@ $.fn.cndkkelimeoyunu = function(options) {
     }
 
     // Check if is alphanumeric
-    function isAlphabet(key)
+    function isSpecialKey(key)
     {
         if(key.code != "Backspace" && key.code != "ArrowLeft" && key.code != "ArrowRight" && key.code != "Space"){
             return true;
@@ -168,7 +169,7 @@ $.fn.cndkkelimeoyunu = function(options) {
         var activeLength = gameCurrentKeyword.length;
 
         // Default
-        if(focusBox < activeLength && isAlphabet(key))
+        if(focusBox < activeLength && isSpecialKey(key))
         {
             setTimeout(function(){
                 for(i=focusBox;i<gameCurrentKeyword.length;i++)
@@ -180,7 +181,7 @@ $.fn.cndkkelimeoyunu = function(options) {
                         break;
                     }
                 }
-            }, 10);
+            }, 100);
         }
         else if(key.code == "Backspace")
         {
@@ -221,7 +222,7 @@ $.fn.cndkkelimeoyunu = function(options) {
             {
                 boxesEnteredLength++;
             }
-            enteredWord += $(this).find("input").val().toUpperCase();
+            enteredWord += replaceSpecialChars($(this).find("input").val()).toUpperCase();
         });
 
         // Word is completed check if is correct
@@ -371,6 +372,8 @@ $.fn.cndkkelimeoyunu = function(options) {
     {
         if($(".cndkExtraTimer").length == 0 && !gameIsPassive)
         {
+            $('.cndkBox > input').prop("disabled", false);
+            $('.cndkBox').addClass("cndkBoxIsGuessing");
             $(".cndkRequestLetter").attr("disabled",true);
             $(".cndkGuess").attr("disabled",true);
             gameIsStopped = true;
@@ -406,6 +409,12 @@ $.fn.cndkkelimeoyunu = function(options) {
 
         $('.cndkMainMenu').show();
     });
+
+    function replaceSpecialChars(letter)
+    {
+        letter = letter.replace("i","İ");
+        return letter;
+    }
 
     // Timer for game
     var cndkTimer = function(){
@@ -486,6 +495,27 @@ $.fn.cndkkelimeoyunu = function(options) {
 
          return { start: start }      
     }();
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
 
 }
 

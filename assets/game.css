@@ -4,13 +4,22 @@
  * Licensed under the MIT license
 */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap');
+
+.cndkGameArea button, .cndkGameArea input {
+    -webkit-appearance: button;
+    font-family: inherit;
+    text-transform: none;
+    font-size: 100%;
+}
+
 .cndkGameArea {
     background:#f2f2f2;
     margin:0;
     padding: 0;
     position: relative;
     overflow: hidden;
-    font-family: Arial;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cndkTopArea {
@@ -47,6 +56,7 @@
 
 .cndkMainMenu h1 {
     font-size: 60px;
+    font-weight: bolder;
 }
 
 .cndkMainMenu h1 small{
@@ -76,6 +86,10 @@
     top: -100px;
     width: 100%;
     text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    background: #fff;
+    padding: 20px 0;
 }
 
 .cndkLevel {
@@ -95,7 +109,11 @@
     display:inline-block;
     background: #fff;
     box-shadow: 0 0 45px #ccc;
-    transition: 0.5s;
+    transition: 0.25s;
+ }
+
+ .cndkLevel .cndkBoxIsGuessing{
+    border:2px solid #ccc;
  }
 
  .cndkLevel .cndkBoxCorrect{
@@ -107,7 +125,7 @@
  }
 
  .cndkLevel .cndkBoxOpened{
-    background:orange;
+    background:orange !important;
  }
 
  .cndkLevel .cndkBoxCorrect input,  .cndkLevel .cndkBoxIncorrect input{
@@ -215,4 +233,61 @@
      border: none;
      cursor: pointer;
      outline: none;
+ }
+
+ .cndkGameFooter {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     font-size: 11px;
+ }
+
+ @media only screen and (max-width: 600px) {
+    .cndkTopArea {
+        position: relative;
+    }
+
+    .cndkCurrentInfo {
+        padding: 0;
+    }
+
+    .cndkCurrentInfo .cndkCurrentQuestion, .cndkCurrentInfo .cndkCurrentPoint {
+        float: left;
+        padding:0;
+        margin:0;
+        width:50%;
+    }
+
+    .cndkTopArea > div, .cndkTime > button, .cndkTopArea > div > span {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cndkTime > button {
+        width:50%;
+        float: left;
+    }
+
+    .cndkQuestion {
+        background: none;
+    }
+
+    .cndkCurrentInfo {
+        display: none;
+    }
+
+    .cndkLevel .cndkBox {
+        transform: rotate(0deg);
+        margin:10px;
+    }
+
+    .cndkLevel .cndkBox input {
+        transform: rotate(0deg);
+        font-size: 20px;
+
+    }
+
+    
  }
